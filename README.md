@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIRbyאפי - יצרנית פאות מקצועית | פאות משיער טבעי</title>
+    <meta name="description" content="אפי - יצרנית פאות מקצועית, פאות משיער טבעי בהתאמה אישית, פאות טופ לייס. ייעוץ מקצועי וטיפים לתחזוקת פאות.">
+    <meta name="keywords" content="פאות, פאות טופ לייס, פאות קצרות, חנות פאות, פאות לנשים, פאות משיער טבעי, פאות טבעיות, פאות לייס">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Heebo', Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8f8f8;
+            color: #333;
+        }
+
+        .header {
+            background: #2c2c2c;
+            color: #fff;
+            padding: 12px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #B8860B;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #B8860B;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #B8860B;
+        }
+
+        .main-content {
+            margin-top: 60px;
+        }
+
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1595475884103-40b57eac8da6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            position: relative;
+        }
+
+        .hero-content {
+            background: rgba(255,255,255,0.95);
+            padding: 60px;
+            max-width: 500px;
+            margin-left: 80px;
+            text-align: right;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .welcome-text {
+            font-size: 72px;
+            font-weight: 300;
+            color: #ddd;
+            opacity: 0.7;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .hero-quote {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #333;
+            font-style: italic;
+        }
+
+        .hero-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #B8860B;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            background: #B8860B;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #996f09;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+        }
+
+        .tips-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .tips-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .tips-title {
+            font-size: 48px;
+            font-weight: 300;
+            color: #B8860B;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .tips-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: #B8860B;
+        }
+
+        .tips-intro {
+            font-size: 24px;
+            color: #333;
+            margin-top: 40px;
+            font-weight: 500;
+        }
+
+        .tips-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .tips-content {
+            margin-top: 60px;
+        }
+
+        .tip-item {
+            background: #f9f9f9;
+            margin-bottom: 30px;
+            border-right: 5px solid #B8860B;
+            transition: all 0.3s;
+        }
+
+        .tip-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateX(-5px);
+        }
+
+        .tip-header {
+            background: #B8860B;
+            color: white;
+            padding: 20px 30px;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tip-content {
+            padding: 30px;
+            display: none;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .tip-content.active {
+            display: block;
+        }
+
+        .tip-icon {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+
+        .tip-item.active .tip-icon {
+            transform: rotate(45deg);
+        }
+
+        .checkmark {
+            color: #B8860B;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: #B8860B;
+            font-weight: 600;
+        }
+
+        .about-section {
+            background: #f5f5f5;
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            text-align: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #B8860B;
+        }
+
+        .contact-section {
+            background: #2c2c2c;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            color: #B8860B;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #B8860B;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 40px 30px;
+                max-width: none;
+            }
+            
+            .welcome-text {
+                font-size: 48px;
+            }
+            
+            .tips-title {
+                font-size: 36px;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .nav-menu {
+                gap: 1rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="contact-info">יצרנית פאות מקצועית - טלפון לייעוץ חינם 📞 [מספר טלפון]</div>
+            <div class="logo">HAIRbyאפי</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">בית</a></li>
+                    <li><a href="#tips">טיפים</a></li>
+                    <li><a href="#about">אודות</a></li>
+                    <li><a href="#contact">צרי קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="welcome-text">welcome</div>
+            <div class="hero-content">
+                <div class="hero-quote">
+                    "חשוב לי שכל לקוחה תקבל את הפאה המתאימה לה בצורה מושלמת. כל פאה משקפת ברמת גימור גבוהה והתייחסות אישית טבעית לאורך זמן."
+                </div>
+                <div class="hero-name">אפי - יצרנית פאות</div>
+                <a href="#contact" class="cta-button">📞 לקטלוג</a>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <div class="tips-header">
+                    <h2 class="tips-title">טיפים</h2>
+                    <h3 class="tips-intro">מתחילה? מחפשת פאה חדשה?</h3>
+                    <p class="tips-subtitle">ליהודית ברגמן יש טיפים מקצועיים שיעזרו לך את הדרך לפאה המושלמת שלך!</p>
+                </div>
+
+                <div class="tips-content">
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            איך לבחור את הפאה הנכונה עבורי?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> התחילי מזיהוי צורת הפנים שלך - אובלית, עגולה, ריבועית או לב. לכל צורה מתאימים סגנונות שונים.</p>
+                            <p><span class="checkmark">✓</span> בחרי פאה זקוקה לטיפוח ולתחזוקה שוטפת כדי שתישמר כמו חדשה לאורך זמן. הברישי אותה בעדינות בכל הכיוונים והיזהרי שלא לשבור, לרוות בטעות בטבע שלך להרגיש נוח במראה החדש.</p>
+                            <p><span class="checkmark">✓</span> חסכי וסרקי את הפאה ואח כך להגדיל לה ללא שמירה על הסגנון העיצובי שלה וסמכי עליה בכל מאת האחוזים שהובה ותעצב לך פאה שעונה על כל הציפיות שלך ותהיה לך למעמק המושלם. רק כאשר התשובה היא אכן אמינות אי לדון!</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            איך לטפל בפאה ולשמור עליה?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> שטיפה: מומלץ לשטוף את הפאה רק כשיש צורך אמיתי בכביסה והכל בזהירות להרגיש נוח במראה החדש שלך.</p>
+                            <p><span class="checkmark">✓</span> ייבוש: זכרי כי פאה זקוקה לטיפוח ולתחזוקה שוטפת כדי שתישמר כמו חדשה לאורך זמן. הברישי אותה בעדינות בכל הכיוונים והיזהרי שלא לשבור.</p>
+                            <p><span class="checkmark">✓</span> סירוק: התפני וסרקי את הפאה אחת לחודש, גם פאות של יבש טבעי זקוקות לתחזוקה לתפירה בשביל לשמור על מראה חדש ונעים לעין.</p>
+                            <p><span class="checkmark">✓</span> אחסון: כאשר את מסירה את הפאה - תניחי אותה על ראש תואם בתוך הארון או הקופסא.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            מה ההבדל בין סוגי השיער השונים?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> <span class="highlight">שיער ברזילאי:</span> עבה וחזק במיוחד, מתאים לכל סוגי העיצוב. עמיד מאוד ונראה טבעי לאורך זמן רב.</p>
+                            <p><span class="checkmark">✓</span> <span class="highlight">שיער רוסי:</span> דק ורך יותר, מתאים במיוחד לפאות לייס ומעניק מראה טבעי מאוד.</p>
+                            <p><span class="checkmark">✓</span> <span class="highlight">שיער אירופאי:</span> האיכות הגבוהה ביותר, מתאים לכל הסגנונות ובעל עמידות יוצאת דופן.</p>
+                            <p><span class="checkmark">✓</span> כל סוג שיער עובר תהליך ניקוי וסינון מדוקדק כדי להבטיח איכות מושלמת.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            מה זה פאות טופ לייס ומה היתרונות?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> <span class="highlight">פאות טופ לייס</span> כוללות בסיס שקוף דק במיוחד בחלק העליון המעניק מראה של קו שיער טבעי.</p>
+                            <p><span class="checkmark">✓</span> הלייס מאפשר לראות את הקרקפת מתחת ויוצר אשלייה של שיער הצומח מהראש.</p>
+                            <p><span class="checkmark">✓</span> ניתן לעצב את השיער לכל הכיוונים ולחלק אותו בכל מקום.</p>
+                            <p><span class="checkmark">✓</span> מתאים במיוחד למי שמחפשת את המראה הטבעי ביותר האפשרי.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            כמה זמן לוקח לייצר פאה מותאמת אישית?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> פגישת ייעוץ ראשונית: 60-90 דקות כולל מדידות מדוייקות.</p>
+                            <p><span class="checkmark">✓</span> זמן ייצור: 2-4 שבועות בהתאם למורכבות הפאה והדרישות המיוחדות.</p>
+                            <p><span class="checkmark">✓</span> פגישת התאמה: 90-120 דקות כולל גזירה ועיצוב סופיים.</p>
+                            <p><span class="checkmark">✓</span> במקרים דחופים ניתן לזרז את התהליך בתיאום מראש.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-item">
+                        <div class="tip-header" onclick="toggleTip(this)">
+                            איך להתכונן לפגישת הייעוץ הראשונה?
+                            <span class="tip-icon">+</span>
+                        </div>
+                        <div class="tip-content">
+                            <p><span class="checkmark">✓</span> הביאי תמונות של תסרוקות שאת אוהבת - זה יעזור לי להבין את הטעם שלך.</p>
+                            <p><span class="checkmark">✓</span> חישבי על האירועים שבהם תרצי להשתמש בפאה - יומיומי, חגים, אירועים מיוחדים.</p>
+                            <p><span class="checkmark">✓</span> הכיני רשימת שאלות - אני כאן לענות על כל דבר שמעניין אותך.</p>
+                            <p><span class="checkmark">✓</span> אל תדאגי לגבי התקציב - נמצא פתרון שמתאים לך.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">אודותיי</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>אני <span class="highlight">אפי - יצרנית פאות מקצועית</span> עם תשוקה אמיתית ליצירת פאות איכותיות המעניקות לנשים ביטחון ויופי.</p>
+                        
+                        <p>המסע שלי התחיל ממקום אישי מאוד - כשהבת שלי חלתה בסרטן, הבנתי כמה חשוב לאישה להרגיש יפה ובטוחה בעצמה, במיוחד בתקופות מאתגרות.</p>
+
+                        <p>מכאן נולד הרצון שלי לעזור לנשים אחרות. <span class="highlight">בעולם של היום, פאה איכותית היא אקססורי אופנה מושלם</span> - בדיוק כמו תיק יד יוקרתי או נעליים מעוצבות.</p>
+
+                        <p>אני משתמשת רק ב<span class="highlight">שיער ברזילאי ורוסי איכותי</span> מהמובחרים בשוק, ללא תוספים כימיקליים. כל פאה היא יצירת אמנות ייחודית המיועדת להעניק לך תחושת מושלמות.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0c6ac80ed8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="פאה איכותית משיער טבעי">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" style="color: white;">צרי קשר</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>בואי נתחיל יחד את המסע שלך</h3>
+                        <p><strong>📞 טלפון:</strong> [מספר טלפון]</p>
+                        <p><strong>📱 וואטסאפ:</strong> [מספר וואטסאפ]</p>
+                        <p><strong>✉️ אימייל:</strong> info@hairbyeffi.co.il</p>
+                        <p><strong>📍 כתובת:</strong> [כתובת העסק]</p>
+                        
+                        <h3 style="margin-top: 30px;">שעות פעילות</h3>
+                        <p>ראשון-חמישי: 9:00-18:00</p>
+                        <p>יום שישי: 9:00-13:00</p>
+                        <p>מוצאי שבת: 20:00-22:00</p>
+
+                        <h3 style="margin-top: 30px;">יעוץ ראשוני חינם</h3>
+                        <p>בפגישה הראשונה נכיר זו את זו ונתאים את הפתרון המושלם עבורך.</p>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3 style="color: #B8860B; margin-bottom: 20px; text-align: center;">קבעי פגישת יעוץ</h3>
+                        <form>
+                            <div class="form-group">
+                                <label>שם מלא</label>
+                                <input type="text" required placeholder="איך קוראים לך?">
+                            </div>
+                            <div class="form-group">
+                                <label>טלפון</label>
+                                <input type="tel" required placeholder="מספר הטלפון שלך">
+                            </div>
+                            <div class="form-group">
+                                <label>סוג פאה מעוניינת</label>
+                                <select required>
+                                    <option value="">בחרי סוג פאה</option>
+                                    <option>פאות טופ לייס</option>
+                                    <option>פאות קצרות</option>
+                                    <option>פאות ארוכות</option>
+                                    <option>פאות משיער ברזילאי</option>
+                                    <option>פאות משיער רוסי</option>
+                                    <option>עדיין לא בטוחה</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>הודעה</label>
+                                <textarea rows="3" placeholder="ספרי לי על מה שאת מחפשת..."></textarea>
+                            </div>
+                            <button type="submit" class="cta-button" style="width: 100%;">שלחי הודעה</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/[מספר-וואטסאפ]" class="floating-whatsapp" target="_blank">
+        💬 וואטסאפ
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">
+                <strong>HAIRbyאפי</strong> - יצרנית פאות מקצועית
+            </p>
+            <p style="opacity: 0.8; margin-bottom: 20px;">
+                פאות משיער טבעי | פאות טופ לייס | פאות לנשים | התאמה אישית ברמת פרמיום
+            </p>
+            <p style="font-size: 14px; opacity: 0.6;">
+                © 2024 HAIRbyאפי. כל הזכויות שמורות. | כי את ראויה למיטב! 💕
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTip(element) {
+            const tipItem = element.parentElement;
+            const content = tipItem.querySelector('.tip-content');
+            const icon = element.querySelector('.tip-icon');
+            
+            // Close all other tips
+            document.querySelectorAll('.tip-item').forEach(item => {
+                if (item !== tipItem) {
+                    item.classList.remove('active');
+                    item.querySelector('.tip-content').classList.remove('active');
+                    item.querySelector('.tip-icon').textContent = '+';
+                }
+            });
+            
+            // Toggle current tip
+            tipItem.classList.toggle('active');
+            content.classList.toggle('active');
+            icon.textContent = content.classList.contains('active') ? '×' : '+';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('תודה רבה! ההודעה נשלחה בהצלחה. אחזור אלייך בהקדם האפשרי!');
+        });
+    </script>
+</body>
+</html>
